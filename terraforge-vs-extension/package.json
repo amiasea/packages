@@ -1,0 +1,47 @@
+{
+  "name": "terraforge",
+  "displayName": "Terraforge",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "main": "./dist/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "terraforge.run",
+        "title": "Terraforge: Run"
+      },
+      {
+        "command": "terraforge.compile",
+        "title": "Terraforge: Compile Provider"
+      },
+      {
+        "command": "terraforge.greenlight",
+        "title": "Terraforge: Check Greenlight"
+      },
+      {
+        "command": "terraforge.panel",
+        "title": "Terraforge: Open Panel"
+      }
+    ]
+  },
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "scripts": {
+    "watch:tsc": "tsc -p . --watch",
+    "watch:esbuild": "esbuild src/extension.ts --bundle --outfile=dist/extension.js --platform=node --external:vscode --format=cjs --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.9",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.3.0"
+  }
+}
