@@ -1,0 +1,16 @@
+{
+  "provider": {
+    "name": "example",
+    "version": "0.1.0"
+  },
+  "resources": [
+    {
+      "name": "example_resource",
+      "type": "ExampleResource",
+      "fields": [
+        { "name": "id", "type": "string", "required": true },
+        { "name": "name", "type": "string", "required": true }
+      ]
+    }
+  ]
+}
