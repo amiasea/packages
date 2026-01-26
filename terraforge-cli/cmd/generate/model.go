@@ -5,8 +5,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	genmodel "github.com/amiasea/packages/terraforge-cli/internal/generator/model"
-	schema "github.com/amiasea/packages/terraforge-cli/internal/generator/schema"
+	genmodel "github.com/amiasea/packages/terraforge-cli/internal/codegen/model"
+	schema "github.com/amiasea/packages/terraforge-cli/internal/codegen/schema"
 )
 
 func NewModelCmd() *cobra.Command {

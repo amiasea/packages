@@ -3,12 +3,12 @@ package generate
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/amiasea/packages/terraforge-cli/internal/generator/irgraph"
-	genmodel "github.com/amiasea/packages/terraforge-cli/internal/generator/model"
-	module "github.com/amiasea/packages/terraforge-cli/internal/generator/module"
-	"github.com/amiasea/packages/terraforge-cli/internal/generator/modulegraph"
-	schema "github.com/amiasea/packages/terraforge-cli/internal/generator/schema"
-	model "github.com/amiasea/packages/terraforge-cli/internal/model"
+	"github.com/amiasea/packages/terraforge-cli/internal/codegen/irbuild"
+	"github.com/amiasea/packages/terraforge-cli/internal/codegen/irgraph"
+	genmodel "github.com/amiasea/packages/terraforge-cli/internal/codegen/model"
+	module "github.com/amiasea/packages/terraforge-cli/internal/codegen/module"
+	"github.com/amiasea/packages/terraforge-cli/internal/codegen/modulegraph"
+	schema "github.com/amiasea/packages/terraforge-cli/internal/codegen/schema"
 )
 
 func NewModuleCmd() *cobra.Command {
@@ -32,8 +32,8 @@ func NewModuleCmd() *cobra.Command {
 				return err
 			}
 
-			// 3. Convert generator model → IR
-			irModel, err := model.Build(gm)
+			// 3. Convert generator model → canonical IR
+			irModel, err := irbuild.Build(gm)
 			if err != nil {
 				return err
 			}
@@ -50,15 +50,9 @@ func NewModuleCmd() *cobra.Command {
 				return err
 			}
 
-			// 6. Convert module graph → module definitions
-			mods, err := module.FromGraph(mg)
-			if err != nil {
-				return err
-			}
-
-			// 7. Write module files to disk
+			// 6. Generate Terraform modules directly from the module graph
 			cfg := module.Config{OutputDir: outDir}
-			return module.Generate(mods, cfg)
+			return module.GenerateFromGraph(mg, cfg)
 		},
 	}
 

@@ -5,12 +5,12 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/amiasea/packages/terraforge-cli/internal/generator/diagram"
-	"github.com/amiasea/packages/terraforge-cli/internal/generator/irgraph"
-	genmodel "github.com/amiasea/packages/terraforge-cli/internal/generator/model"
-	"github.com/amiasea/packages/terraforge-cli/internal/generator/modulegraph"
-	"github.com/amiasea/packages/terraforge-cli/internal/generator/schema"
-	model "github.com/amiasea/packages/terraforge-cli/internal/model"
+	"github.com/amiasea/packages/terraforge-cli/internal/codegen/diagram"
+	"github.com/amiasea/packages/terraforge-cli/internal/codegen/irbuild"
+	"github.com/amiasea/packages/terraforge-cli/internal/codegen/irgraph"
+	genmodel "github.com/amiasea/packages/terraforge-cli/internal/codegen/model"
+	"github.com/amiasea/packages/terraforge-cli/internal/codegen/modulegraph"
+	"github.com/amiasea/packages/terraforge-cli/internal/codegen/schema"
 )
 
 func NewDiagramCmd() *cobra.Command {
@@ -34,8 +34,8 @@ func NewDiagramCmd() *cobra.Command {
 				return err
 			}
 
-			// 3. Convert generator model → IR
-			irModel, err := model.Build(gm)
+			// 3. Convert generator model → canonical IR
+			irModel, err := irbuild.Build(gm)
 			if err != nil {
 				return err
 			}
