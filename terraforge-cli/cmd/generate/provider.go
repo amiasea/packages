@@ -13,6 +13,7 @@ import (
 	"github.com/amiasea/packages/terraforge-cli/internal/codegen/modulegraph"
 	providersrc "github.com/amiasea/packages/terraforge-cli/internal/codegen/providersrc"
 	schema "github.com/amiasea/packages/terraforge-cli/internal/codegen/schema"
+	"github.com/amiasea/packages/terraforge-cli/internal/filesystem"
 )
 
 func NewProviderCmd() *cobra.Command {
@@ -23,6 +24,8 @@ func NewProviderCmd() *cobra.Command {
 		Use:   "provider",
 		Short: "Generate Terraforge provider source code",
 		RunE: func(cmd *cobra.Command, args []string) error {
+			fs := filesystem.New()
+
 			if outDir == "" {
 				cwd, err := os.Getwd()
 				if err != nil {
@@ -67,7 +70,7 @@ func NewProviderCmd() *cobra.Command {
 				Package:   "main",
 			}
 
-			if err := providersrc.GenerateFromGraph(mg, cfg); err != nil {
+			if err := providersrc.GenerateFromGraph(fs, mg, cfg); err != nil {
 				return err
 			}
 

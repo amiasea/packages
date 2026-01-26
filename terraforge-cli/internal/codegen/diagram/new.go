@@ -4,6 +4,7 @@ import (
 	"path/filepath"
 
 	"github.com/amiasea/packages/terraforge-cli/internal/codegen/modulegraph"
+	"github.com/amiasea/packages/terraforge-cli/internal/filesystem"
 	generatoriface "github.com/amiasea/packages/terraforge-cli/internal/generatoriface"
 )
 
@@ -20,11 +21,11 @@ func (g *diagramGenerator) Name() string {
 }
 
 // Generate consumes the module graph and writes a DOT diagram.
-func (g *diagramGenerator) Generate(gr *modulegraph.Graph, outDir string) error {
+func (g *diagramGenerator) Generate(fs *filesystem.FS, gr *modulegraph.Graph, outDir string) error {
 	cfg := Config{
 		OutputDir: filepath.Join(outDir, "diagram"),
 		Filename:  "diagram.dot",
 	}
 
-	return Generate(gr, cfg)
+	return Generate(fs, gr, cfg)
 }

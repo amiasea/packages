@@ -1,8 +1,11 @@
 package generatoriface
 
-import "github.com/amiasea/packages/terraforge-cli/internal/codegen/modulegraph"
+import (
+	"github.com/amiasea/packages/terraforge-cli/internal/codegen/modulegraph"
+	"github.com/amiasea/packages/terraforge-cli/internal/filesystem"
+)
 
 type Generator interface {
 	Name() string
-	Generate(*modulegraph.Graph, string) error
+	Generate(fs *filesystem.FS, g *modulegraph.Graph, outDir string) error
 }

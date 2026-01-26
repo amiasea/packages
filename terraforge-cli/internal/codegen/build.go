@@ -11,6 +11,7 @@ import (
 	"github.com/amiasea/packages/terraforge-cli/internal/codegen/modulegraph"
 	"github.com/amiasea/packages/terraforge-cli/internal/codegen/providersrc"
 	"github.com/amiasea/packages/terraforge-cli/internal/codegen/schema"
+	"github.com/amiasea/packages/terraforge-cli/internal/filesystem"
 	"github.com/amiasea/packages/terraforge-cli/internal/ir"
 )
 
@@ -25,6 +26,8 @@ type Result struct {
 
 // Build performs the canonical Terraforge compiler pipeline.
 func Build(schemaPath string, outDir string) (*Result, error) {
+	fs := filesystem.New()
+
 	// 1. Load schema.json
 	s, err := schema.Load(schemaPath)
 	if err != nil {
@@ -56,20 +59,20 @@ func Build(schemaPath string, outDir string) (*Result, error) {
 	}
 
 	// 6. Run artifact generators
-	if err := module.GenerateFromGraph(mg, module.Config{
+	if err := module.GenerateFromGraph(fs, mg, module.Config{
 		OutputDir: filepath.Join(outDir, "modules"),
 	}); err != nil {
 		return nil, err
 	}
 
-	if err := providersrc.GenerateFromGraph(mg, providersrc.Config{
+	if err := providersrc.GenerateFromGraph(fs, mg, providersrc.Config{
 		OutputDir: filepath.Join(outDir, "provider"),
 		Package:   "main",
 	}); err != nil {
 		return nil, err
 	}
 
-	if err := diagram.Generate(mg, diagram.Config{
+	if err := diagram.Generate(fs, mg, diagram.Config{
 		OutputDir: filepath.Join(outDir, "diagram"),
 		Filename:  "diagram.dot",
 	}); err != nil {

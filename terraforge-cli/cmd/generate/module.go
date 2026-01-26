@@ -9,6 +9,7 @@ import (
 	module "github.com/amiasea/packages/terraforge-cli/internal/codegen/module"
 	"github.com/amiasea/packages/terraforge-cli/internal/codegen/modulegraph"
 	schema "github.com/amiasea/packages/terraforge-cli/internal/codegen/schema"
+	"github.com/amiasea/packages/terraforge-cli/internal/filesystem"
 )
 
 func NewModuleCmd() *cobra.Command {
@@ -19,6 +20,7 @@ func NewModuleCmd() *cobra.Command {
 		Use:   "module",
 		Short: "Generate Terraform modules from the resource model",
 		RunE: func(cmd *cobra.Command, args []string) error {
+			fs := filesystem.New()
 
 			// 1. Load schema.json
 			s, err := schema.Load(schemaPath)
@@ -52,7 +54,7 @@ func NewModuleCmd() *cobra.Command {
 
 			// 6. Generate Terraform modules directly from the module graph
 			cfg := module.Config{OutputDir: outDir}
-			return module.GenerateFromGraph(mg, cfg)
+			return module.GenerateFromGraph(fs, mg, cfg)
 		},
 	}
 

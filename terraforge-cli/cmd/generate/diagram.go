@@ -11,6 +11,7 @@ import (
 	genmodel "github.com/amiasea/packages/terraforge-cli/internal/codegen/model"
 	"github.com/amiasea/packages/terraforge-cli/internal/codegen/modulegraph"
 	"github.com/amiasea/packages/terraforge-cli/internal/codegen/schema"
+	"github.com/amiasea/packages/terraforge-cli/internal/filesystem"
 )
 
 func NewDiagramCmd() *cobra.Command {
@@ -21,6 +22,7 @@ func NewDiagramCmd() *cobra.Command {
 		Use:   "diagram",
 		Short: "Generate a DOT diagram of the resource dependency graph",
 		RunE: func(cmd *cobra.Command, args []string) error {
+			fs := filesystem.New()
 
 			// 1. Load schema.json
 			s, err := schema.Load(schemaPath)
@@ -58,7 +60,7 @@ func NewDiagramCmd() *cobra.Command {
 				Filename:  "diagram.dot",
 			}
 
-			return diagram.Generate(mg, cfg)
+			return diagram.Generate(fs, mg, cfg)
 		},
 	}
 
