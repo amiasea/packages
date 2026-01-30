@@ -1,40 +1,31 @@
 package ai
 
 import (
-	"encoding/json"
-
-	"github.com/amiasea/packages/terraforge-cli/internal/codegen/schema"
+	"fmt"
 )
 
-func BuildPrompt(s *schema.Schema) (string, error) {
-	b, err := json.MarshalIndent(s, "", "  ")
-	if err != nil {
-		return "", err
-	}
+func BuildPrompt(
+	promptTemplate string,
+	schemaJSON string,
+	modulePath string,
+	packageName string,
+	providerAddress string,
+) (string, error) {
 
-	return `
-You are a compiler frontend. Convert this schema into a Terraform provider IR.
+	// Interpolate the %s placeholders inside prompt.txt
+	final := fmt.Sprintf(
+		promptTemplate,
+		packageName,     // %s #1
+		modulePath,      // %s #2
+		modulePath,      // %s #3
+		packageName,     // %s #4
+		modulePath,      // %s #5
+		packageName,     // %s #6
+		providerAddress, // %s #7
+		packageName,     // %s #8
+		providerAddress, // %s #9
+		schemaJSON,      // %s #10
+	)
 
-Return ONLY valid JSON matching this structure:
-
-{
-  "provider": { "name": "...", "description": "...", "config": {} },
-  "resources": [
-    {
-      "name": "...",
-      "type": "...",
-      "attributes": [
-        { "name": "...", "type": "...", "required": true, "computed": false, "description": "..." }
-      ],
-      "create": { "method": "POST", "path": "...", "body": {}, "response_map": {} },
-      "read":   { "method": "GET",  "path": "...", "body": {}, "response_map": {} },
-      "update": { "method": "PUT",  "path": "...", "body": {}, "response_map": {} },
-      "delete": { "method": "DELETE","path": "...", "body": {}, "response_map": {} }
-    }
-  ],
-  "models": []
-}
-
-Schema:
-` + string(b), nil
+	return final, nil
 }

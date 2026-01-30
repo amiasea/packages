@@ -1,0 +1,11 @@
+C:\repos\packages\loom\Amiasea.Loom\obj\Debug\netstandard2.0\Amiasea.Loom.csproj.AssemblyReference.cache
+C:\repos\packages\loom\Amiasea.Loom\obj\Debug\netstandard2.0\Amiasea.Loom.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos\packages\loom\Amiasea.Loom\obj\Debug\netstandard2.0\Amiasea.Loom.AssemblyInfoInputs.cache
+C:\repos\packages\loom\Amiasea.Loom\obj\Debug\netstandard2.0\Amiasea.Loom.AssemblyInfo.cs
+C:\repos\packages\loom\Amiasea.Loom\obj\Debug\netstandard2.0\Amiasea.Loom.csproj.CoreCompileInputs.cache
+C:\repos\packages\loom\Amiasea.Loom\obj\Debug\netstandard2.0\Amiasea.Loom.sourcelink.json
+C:\repos\packages\loom\Amiasea.Loom\obj\Debug\netstandard2.0\Amiasea.Loom.dll
+C:\repos\packages\loom\Amiasea.Loom\obj\Debug\netstandard2.0\Amiasea.Loom.pdb
+C:\repos\packages\loom\Amiasea.Loom\bin\Debug\netstandard2.0\Amiasea.Loom.deps.json
+C:\repos\packages\loom\Amiasea.Loom\bin\Debug\netstandard2.0\Amiasea.Loom.dll
+C:\repos\packages\loom\Amiasea.Loom\bin\Debug\netstandard2.0\Amiasea.Loom.pdb

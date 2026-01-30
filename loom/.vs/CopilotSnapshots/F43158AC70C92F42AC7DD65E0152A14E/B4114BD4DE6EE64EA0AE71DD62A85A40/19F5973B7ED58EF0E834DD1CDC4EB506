@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Amiasea.Loom.AST;
+
+
+// name: value pair, value is already parsed into a CLR-ish shape
+// (string, int, bool, list, object, etc.)
+public sealed record ArgumentNode(
+    string Name,
+    ValueNode Value
+);

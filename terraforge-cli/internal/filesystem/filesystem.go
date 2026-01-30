@@ -6,6 +6,13 @@ import (
 	"path/filepath"
 )
 
+//
+// -----------------------------------------------------------------------------
+//  FS — General-purpose filesystem abstraction
+// -----------------------------------------------------------------------------
+//
+
+// FS is a simple filesystem abstraction.
 type FS struct{}
 
 // New returns a new filesystem abstraction.
@@ -35,4 +42,16 @@ func (fs *FS) ReadFile(path string) ([]byte, error) {
 		return nil, fmt.Errorf("failed to read file %s: %w", path, err)
 	}
 	return data, nil
+}
+
+//
+// -----------------------------------------------------------------------------
+//  WriteGeneratedFiles — AI output parser + writer
+// -----------------------------------------------------------------------------
+//
+
+// WriteGeneratedFiles takes the raw AI output and writes provider.go and main.go.
+func WriteGeneratedFiles(outDir, aiOutput string) error {
+	path := filepath.Join(outDir, "provider.go")
+	return os.WriteFile(path, []byte(aiOutput), 0644)
 }

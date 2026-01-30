@@ -1,0 +1,11 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <UsingTask
+      TaskName="LoomEfModelTask"
+      AssemblyFile="$(MSBuildThisFileDirectory)..\tasks\Amiasea.Loom.Build.Task.dll" />
+
+  <Target Name="GenerateLoomMetadata" BeforeTargets="BeforeBuild">
+    <LoomEfModelTask />
+  </Target>
+
+</Project>

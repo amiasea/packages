@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Amiasea.Loom.Metadata;
+
+public sealed class FieldShapeResolver : IFieldShapeResolver
+{
+    private readonly Dictionary<(string Parent, string Field), FieldShape> _shapes;
+
+    public FieldShapeResolver(
+        Dictionary<(string Parent, string Field), FieldShape> shapes)
+    {
+        _shapes = shapes;
+    }
+
+    public FieldShape GetShape(string parentTypeName, string fieldName)
+    {
+        if (_shapes.TryGetValue((parentTypeName, fieldName), out var shape))
+            return shape;
+
+        throw new InvalidOperationException(
+            $"Field shape not found for {parentTypeName}.{fieldName}");
+    }
+}

@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Amiasea.Loom.EF;
+
+public interface IGraphQueryableProvider
+{
+    /// <summary>
+    /// Produces the root IQueryable for a top-level field.
+    /// Example: Query.planes → IQueryable<Plane>
+    /// </summary>
+    IQueryable Root(
+        string fieldName,
+        IReadOnlyDictionary<string, object?> arguments
+    );
+
+    /// <summary>
+    /// Applies a navigation field to an IQueryable.
+    /// Example: IQueryable<Plane> + airport → IQueryable<Airport>
+    /// Example: IQueryable<Airport> + planes → IQueryable<Plane>
+    /// </summary>
+    IQueryable ApplyField(
+        IQueryable source,
+        string parentTypeName,
+        string fieldName,
+        IReadOnlyDictionary<string, object?> arguments
+    );
+
+    /// <summary>
+    /// Extracts a scalar value from a materialized entity.
+    /// Example: Plane → tailNumber
+    /// </summary>
+    object? ExtractValue(
+        object entity,
+        string fieldName
+    );
+}

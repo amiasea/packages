@@ -1,0 +1,172 @@
+﻿namespace Amiasea.Loom.Projection;
+
+using System.Linq.Expressions;
+using Amiasea.Loom.AST;
+using Amiasea.Loom.EF;
+using Amiasea.Loom.Metadata;
+
+public sealed class ProjectionEngine : IProjectionEngine
+{
+    private readonly IFieldShapeResolver _shapeResolver;
+
+    public ProjectionEngine(IFieldShapeResolver shapeResolver)
+    {
+        _shapeResolver = shapeResolver;
+    }
+
+    public async Task<object?> ExecuteAsync(
+        DocumentNode document,
+        OperationNode operation,
+        IGraphQueryableProvider provider,
+        CancellationToken cancellationToken = default)
+    {
+        // 1. Get the root selection set
+        var rootSelectionSet = operation.SelectionSet;
+
+        // 2. Project the root selection set
+        var result = await ProjectSelectionSetAsync(
+            rootSelectionSet,
+            parentTypeName: GetRootTypeName(operation),
+            source: null,
+            provider,
+            cancellationToken
+        );
+
+        return result;
+    }
+
+    private static string GetRootTypeName(OperationNode operation) =>
+        operation.Kind switch
+        {
+            OperationKind.Query => "Query",
+            OperationKind.Mutation => "Mutation",
+            _ => throw new NotSupportedException()
+        };
+
+    private async Task<object?> ProjectSelectionSetAsync(
+        SelectionSetNode selectionSet,
+        string parentTypeName,
+        IQueryable? source,
+        IGraphQueryableProvider provider,
+        CancellationToken cancellationToken)
+    {
+        var result = new Dictionary<string, object?>();
+
+        foreach (var selection in selectionSet.Selections)
+        {
+            if (selection is FieldNode field)
+            {
+                var fieldValue = await ProjectFieldAsync(
+                    field,
+                    parentTypeName,
+                    source,
+                    provider,
+                    cancellationToken
+                );
+
+                var key = field.Alias ?? field.Name;
+                result[key] = fieldValue;
+            }
+        }
+
+        return result;
+    }
+
+    private async Task<object?> ProjectFieldAsync(
+        FieldNode field,
+        string parentTypeName,
+        IQueryable? source,
+        IGraphQueryableProvider provider,
+        CancellationToken cancellationToken)
+    {
+        var shape = _shapeResolver.GetShape(parentTypeName, field.Name);
+
+        // 1. Root or navigation IQueryable
+        IQueryable fieldSource = source ?? provider.Root(
+            field.Name,
+            ConvertArgs(field.Arguments)
+        );
+
+        // 2. Navigation (object or list)
+        if (field.SelectionSet is not null)
+        {
+            var childSource = provider.ApplyField(
+                fieldSource,
+                parentTypeName,
+                field.Name,
+                ConvertArgs(field.Arguments)
+            );
+
+            var projected = await ProjectSelectionSetAsync(
+                field.SelectionSet,
+                parentTypeName: field.Name,
+                source: childSource,
+                provider,
+                cancellationToken
+            );
+
+            return shape switch
+            {
+                FieldShape.Object => ((List<object>)projected!).SingleOrDefault(),
+                FieldShape.List => projected,
+                _ => throw new InvalidOperationException("Scalar cannot have a selection set")
+            };
+        }
+
+        // 3. Scalar
+        if (shape != FieldShape.Scalar)
+            throw new InvalidOperationException("Non-scalar field missing selection set");
+
+        var list = await ExecuteToListAsync(fieldSource, cancellationToken);
+
+        return list.Count switch
+        {
+            0 => null,
+            1 => provider.ExtractValue(list[0], field.Name),
+            _ => throw new InvalidOperationException("Scalar field returned multiple rows")
+        };
+    }
+
+    private static IReadOnlyDictionary<string, object?> ConvertArgs(
+        IReadOnlyList<ArgumentNode> args)
+    {
+        var dict = new Dictionary<string, object?>(args.Count);
+        foreach (var arg in args)
+            dict[arg.Name] = ConvertValue(arg.Value);
+        return dict;
+    }
+
+    private static object? ConvertValue(ValueNode value) =>
+        value switch
+        {
+            NullValueNode => null,
+            IntValueNode v => v.Value,
+            FloatValueNode v => v.Value,
+            StringValueNode v => v.Value,
+            BooleanValueNode v => v.Value,
+            EnumValueNode v => v.Value,
+            ListValueNode v => v.Values.Select(ConvertValue).ToList(),
+            ObjectValueNode v => v.Fields.ToDictionary(f => f.Name, f => ConvertValue(f.Value)),
+            _ => throw new NotSupportedException()
+        };
+
+    private static async Task<List<object>> ExecuteToListAsync(
+        IQueryable source,
+        CancellationToken cancellationToken)
+    {
+        var provider = source.Provider;
+
+        var executeMethod = typeof(IQueryProvider)
+            .GetMethod(nameof(IQueryProvider.Execute), new[] { typeof(Expression) })!;
+
+        var expression = Expression.Call(
+            typeof(Queryable),
+            nameof(Queryable.ToList),
+            new[] { source.ElementType },
+            source.Expression
+        );
+
+        var result = executeMethod.Invoke(provider, new object[] { expression })!;
+        return ((IEnumerable)result).Cast<object>().ToList();
+    }
+}

@@ -12,7 +12,7 @@ import (
 type Client struct {
 	Endpoint string
 	APIKey   string
-	Model    string
+	Model    string // deployment name
 }
 
 func NewClient(endpoint, apiKey, model string) *Client {
@@ -23,16 +23,24 @@ func NewClient(endpoint, apiKey, model string) *Client {
 	}
 }
 
-func (c *Client) GenerateIR(ctx context.Context, prompt string) ([]byte, error) {
+// GenerateProvider sends the prompt to Azure AI and returns Go provider source code.
+func (c *Client) GenerateProvider(ctx context.Context, prompt string) (string, error) {
+	url := fmt.Sprintf(
+		"%s/openai/deployments/%s/chat/completions?api-version=2024-10-01-preview",
+		c.Endpoint,
+		c.Model,
+	)
+
 	reqBody := map[string]any{
-		"model": c.Model,
-		"input": prompt,
+		"messages": []map[string]string{
+			{"role": "user", "content": prompt},
+		},
 	}
 
 	b, _ := json.Marshal(reqBody)
-	req, err := http.NewRequestWithContext(ctx, "POST", c.Endpoint, bytes.NewReader(b))
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bytes.NewReader(b))
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 
 	req.Header.Set("Content-Type", "application/json")
@@ -40,14 +48,35 @@ func (c *Client) GenerateIR(ctx context.Context, prompt string) ([]byte, error) 
 
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 	defer resp.Body.Close()
 
+	raw, _ := io.ReadAll(resp.Body)
+
+	fmt.Println("=== RAW AI OUTPUT BEGIN ===")
+	fmt.Println(string(raw))
+	fmt.Println("=== RAW AI OUTPUT END ===")
+
 	if resp.StatusCode >= 300 {
-		body, _ := io.ReadAll(resp.Body)
-		return nil, fmt.Errorf("AI error: %s", string(body))
+		return "", fmt.Errorf("AI error: %s", string(raw))
 	}
 
-	return io.ReadAll(resp.Body)
+	var parsed struct {
+		Choices []struct {
+			Message struct {
+				Content string `json:"content"`
+			} `json:"message"`
+		} `json:"choices"`
+	}
+
+	if err := json.Unmarshal(raw, &parsed); err != nil {
+		return "", err
+	}
+
+	if len(parsed.Choices) == 0 {
+		return "", fmt.Errorf("no choices returned")
+	}
+
+	return parsed.Choices[0].Message.Content, nil
 }

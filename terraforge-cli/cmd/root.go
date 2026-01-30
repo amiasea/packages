@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/amiasea/packages/terraforge-cli/cmd/generate"
 	"github.com/spf13/cobra"
 )
 
@@ -16,8 +15,7 @@ var rootCmd = &cobra.Command{
 func init() {
 	rootCmd.AddCommand(NewLoginCmd())
 	rootCmd.AddCommand(NewVersionCmd())
-	rootCmd.AddCommand(NewBuildCmd())
-	rootCmd.AddCommand(generate.NewGenerateCmd())
+	rootCmd.AddCommand(NewAICmd()) // the only generator now
 }
 
 func Execute() {

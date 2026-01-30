@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Amiasea.EF/Amiasea.EF.csproj" Id="1f801e74-a2cf-4d24-9a9a-f390fcdd21c1" />
+  <Project Path="Amiasea.Loom.Build.Task/Amiasea.Loom.Build.Task.csproj" Id="e49eaca9-2287-4f7c-ade7-a19cf7ea68ff" />
+  <Project Path="Amiasea.Loom/Amiasea.Loom.csproj" />
+</Solution>

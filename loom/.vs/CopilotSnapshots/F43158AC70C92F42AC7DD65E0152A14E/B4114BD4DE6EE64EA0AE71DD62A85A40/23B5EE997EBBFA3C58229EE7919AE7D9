@@ -1,0 +1,113 @@
+﻿using System.Collections.Generic;
+using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore;
+
+namespace Amiasea.Loom.EF;
+
+public sealed class EfGraphQueryableProvider : IGraphQueryableProvider
+{
+    private readonly DbContext _db;
+
+    public EfGraphQueryableProvider(DbContext db)
+    {
+        _db = db;
+    }
+
+    public IQueryable Root(
+        string fieldName,
+        IReadOnlyDictionary<string, object?> arguments)
+    {
+        // Example:
+        // Query.planes → _db.Set<Plane>()
+        //
+        // Validation Stage guarantees:
+        // - fieldName maps to a DbSet<T>
+        // - T is known
+        // - arguments are valid
+
+        var setType = ResolveRootClrType(fieldName);
+        return (IQueryable)_db.GetType()
+            .GetMethod(nameof(DbContext.Set), Type.EmptyTypes)!
+            .MakeGenericMethod(setType)
+            .Invoke(_db, null)!;
+    }
+
+    public IQueryable ApplyField(
+        IQueryable source,
+        string parentTypeName,
+        string fieldName,
+        IReadOnlyDictionary<string, object?> arguments)
+    {
+        // Example:
+        // IQueryable<Plane> + airport → IQueryable<Airport>
+        // IQueryable<Airport> + planes → IQueryable<Plane>
+
+        var elementType = source.ElementType;
+        var navProp = elementType.GetProperty(fieldName)
+            ?? throw new InvalidOperationException(
+                $"Navigation {elementType.Name}.{fieldName} not found");
+
+        var navType = GetNavigationElementType(navProp.PropertyType);
+
+        // Build: source.Select(x => x.Field)
+        var param = Expression.Parameter(elementType, "x");
+        var body = Expression.Property(param, navProp);
+        var lambda = Expression.Lambda(body, param);
+
+        var select = Expression.Call(
+            typeof(Queryable),
+            nameof(Queryable.Select),
+            new[] { elementType, navType },
+            source.Expression,
+            lambda
+        );
+
+        return source.Provider.CreateQuery(select);
+    }
+
+    public object? ExtractValue(object entity, string fieldName)
+    {
+        // Example:
+        // Plane → tailNumber
+        // Airport → name
+
+        var prop = entity.GetType().GetProperty(fieldName)
+            ?? throw new InvalidOperationException(
+                $"Scalar {entity.GetType().Name}.{fieldName} not found");
+
+        return prop.GetValue(entity);
+    }
+
+    private static Type ResolveRootClrType(string fieldName)
+    {
+        // This is replaced by generated metadata in real Loom.
+        // For now, throw so the skeleton is honest.
+        throw new NotImplementedException(
+            $"Root type resolution for '{fieldName}' must be provided by generated metadata.");
+    }
+
+    private static Type GetNavigationElementType(Type navType)
+    {
+        // If it's a collection navigation:
+        //   ICollection<T>, IEnumerable<T>, List<T>, etc.
+        if (navType.IsGenericType &&
+            typeof(IEnumerable<>).IsAssignableFrom(navType.GetGenericTypeDefinition()))
+        {
+            return navType.GetGenericArguments()[0];
+        }
+
+        // Otherwise it's a single navigation
+        return navType;
+    }
+}
+
+//1. Zero schema logic
+//All schema correctness is guaranteed by the Validation Stage.
+//2. Zero EF reflection beyond property access
+//Navigation resolution is trivial.
+//3. Zero runtime guessing
+//The ProjectionEngine already knows the shape(scalar/object/list).
+//4. Pure IQueryable algebra
+//Everything is expressed as LINQ expressions, no materialization.
+//5. Replaceable
+//If someone wants Dapper, Marten, MongoDB, or custom LINQ providers, they implement this interface.

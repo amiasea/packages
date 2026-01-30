@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	<LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Build.Framework" Version="18.0.2" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="18.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.32" />
+    <PackageReference Include="System.Text.Json" Version="10.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<None Include="$(OutputPath)Amiasea.Loom.Build.Task.dll" Pack="true" PackagePath="tasks/" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,11 @@
+C:\repos\packages\loom\Amiasea.Loom.Build.Task\obj\Debug\netstandard2.0\Amiasea.Loom.Build.Task.csproj.AssemblyReference.cache
+C:\repos\packages\loom\Amiasea.Loom.Build.Task\obj\Debug\netstandard2.0\Amiasea.Loom.Build.Task.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos\packages\loom\Amiasea.Loom.Build.Task\obj\Debug\netstandard2.0\Amiasea.Loom.Build.Task.AssemblyInfoInputs.cache
+C:\repos\packages\loom\Amiasea.Loom.Build.Task\obj\Debug\netstandard2.0\Amiasea.Loom.Build.Task.AssemblyInfo.cs
+C:\repos\packages\loom\Amiasea.Loom.Build.Task\obj\Debug\netstandard2.0\Amiasea.Loom.Build.Task.csproj.CoreCompileInputs.cache
+C:\repos\packages\loom\Amiasea.Loom.Build.Task\obj\Debug\netstandard2.0\Amiasea.Loom.Build.Task.sourcelink.json
+C:\repos\packages\loom\Amiasea.Loom.Build.Task\bin\Debug\netstandard2.0\Amiasea.Loom.Build.Task.deps.json
+C:\repos\packages\loom\Amiasea.Loom.Build.Task\bin\Debug\netstandard2.0\Amiasea.Loom.Build.Task.dll
+C:\repos\packages\loom\Amiasea.Loom.Build.Task\bin\Debug\netstandard2.0\Amiasea.Loom.Build.Task.pdb
+C:\repos\packages\loom\Amiasea.Loom.Build.Task\obj\Debug\netstandard2.0\Amiasea.Loom.Build.Task.dll
+C:\repos\packages\loom\Amiasea.Loom.Build.Task\obj\Debug\netstandard2.0\Amiasea.Loom.Build.Task.pdb
