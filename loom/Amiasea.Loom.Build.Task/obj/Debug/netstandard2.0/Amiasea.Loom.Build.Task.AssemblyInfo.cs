@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Amiasea.Loom.Build.Task")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+008c08c489c591378367f1c80bd2c35b1d672be3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70dc61e6819a5fb8b6c85c956dc9dbd75b159be3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Amiasea.Loom.Build.Task")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Amiasea.Loom.Build.Task")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

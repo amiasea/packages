@@ -1,7 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\repos\\packages\\loom\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|c:\\repos\\packages\\loom\\amiasea.loom\\ast\\projectionfieldnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|solutionrelative:amiasea.loom\\ast\\projectionfieldnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|c:\\repos\\packages\\loom\\amiasea.loom\\projection\\core\\projectiontyperegistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|solutionrelative:amiasea.loom\\projection\\core\\projectiontyperegistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|c:\\repos\\packages\\loom\\amiasea.loom\\projection\\output\\iprojectionoutputtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|solutionrelative:amiasea.loom\\projection\\output\\iprojectionoutputtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|c:\\repos\\packages\\loom\\amiasea.loom\\projection\\core\\projectionobjecttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|solutionrelative:amiasea.loom\\projection\\core\\projectionobjecttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|c:\\repos\\packages\\loom\\amiasea.loom\\projection\\core\\projectionschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|solutionrelative:amiasea.loom\\projection\\core\\projectionschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|c:\\repos\\packages\\loom\\amiasea.loom\\projection\\core\\iprojectiontyperegistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|solutionrelative:amiasea.loom\\projection\\core\\iprojectiontyperegistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|c:\\repos\\packages\\loom\\amiasea.loom\\projection\\core\\projectionbinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|solutionrelative:amiasea.loom\\projection\\core\\projectionbinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|c:\\repos\\packages\\loom\\amiasea.loom\\schema\\ifieldschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|solutionrelative:amiasea.loom\\schema\\ifieldschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F801E74-A2CF-4D24-9A9A-F390FCDD21C1}|Amiasea.Loom.EF\\Amiasea.Loom.EF.csproj|c:\\repos\\packages\\loom\\amiasea.loom.ef\\schema\\efprojectionexecutor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F801E74-A2CF-4D24-9A9A-F390FCDD21C1}|Amiasea.Loom.EF\\Amiasea.Loom.EF.csproj|solutionrelative:amiasea.loom.ef\\schema\\efprojectionexecutor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|c:\\repos\\packages\\loom\\amiasea.loom\\projection\\core\\iprojectionexecutor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|solutionrelative:amiasea.loom\\projection\\core\\iprojectionexecutor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|c:\\repos\\packages\\loom\\amiasea.loom\\projection\\core\\projectionexecutorbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|solutionrelative:amiasea.loom\\projection\\core\\projectionexecutorbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|c:\\repos\\packages\\loom\\amiasea.loom\\projection\\core\\projectionincludebuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|solutionrelative:amiasea.loom\\projection\\core\\projectionincludebuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|c:\\repos\\packages\\loom\\amiasea.loom\\projection\\core\\projectionplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|solutionrelative:amiasea.loom\\projection\\core\\projectionplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|c:\\repos\\packages\\loom\\amiasea.loom\\projection\\core\\projectionselectionfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|solutionrelative:amiasea.loom\\projection\\core\\projectionselectionfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|c:\\repos\\packages\\loom\\amiasea.loom\\projection\\core\\projectionselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|solutionrelative:amiasea.loom\\projection\\core\\projectionselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|c:\\repos\\packages\\loom\\amiasea.loom\\ast\\iselectionnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|solutionrelative:amiasea.loom\\ast\\iselectionnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|c:\\repos\\packages\\loom\\amiasea.loom\\ast\\valuenode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|solutionrelative:amiasea.loom\\ast\\valuenode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|c:\\repos\\packages\\loom\\amiasea.loom\\ast\\selectionsetnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|solutionrelative:amiasea.loom\\ast\\selectionsetnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|c:\\repos\\packages\\loom\\amiasea.loom\\schema\\fieldschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{528712A8-AA92-61D5-04FB-3D0FC91F685D}|Amiasea.Loom\\Amiasea.Loom.csproj|solutionrelative:amiasea.loom\\schema\\fieldschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7F2616C-1C3A-442F-8319-33033A0A8422}|Amiasea.Loom.Tools\\Amiasea.Loom.Tools.csproj|c:\\repos\\packages\\loom\\amiasea.loom.tools\\schemainspector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7F2616C-1C3A-442F-8319-33033A0A8422}|Amiasea.Loom.Tools\\Amiasea.Loom.Tools.csproj|solutionrelative:amiasea.loom.tools\\schemainspector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +90,268 @@
       "DocumentGroups": [
         {
           "DockedWidth": 267,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IProjectionOutputType.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Output\\IProjectionOutputType.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom\\Projection\\Output\\IProjectionOutputType.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Output\\IProjectionOutputType.cs",
+              "RelativeToolTip": "Amiasea.Loom\\Projection\\Output\\IProjectionOutputType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T03:36:42.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProjectionFieldNode.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom\\AST\\ProjectionFieldNode.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom\\AST\\ProjectionFieldNode.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom\\AST\\ProjectionFieldNode.cs",
+              "RelativeToolTip": "Amiasea.Loom\\AST\\ProjectionFieldNode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T03:35:59.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProjectionObjectType.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\ProjectionObjectType.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom\\Projection\\Core\\ProjectionObjectType.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\ProjectionObjectType.cs*",
+              "RelativeToolTip": "Amiasea.Loom\\Projection\\Core\\ProjectionObjectType.cs*",
+              "ViewState": "AgIAABMAAAAAAAAAAAAUwB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T03:35:31.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProjectionSchema.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\ProjectionSchema.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom\\Projection\\Core\\ProjectionSchema.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\ProjectionSchema.cs",
+              "RelativeToolTip": "Amiasea.Loom\\Projection\\Core\\ProjectionSchema.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA1wBYAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T03:34:48.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProjectionTypeRegistry.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\ProjectionTypeRegistry.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom\\Projection\\Core\\ProjectionTypeRegistry.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\ProjectionTypeRegistry.cs",
+              "RelativeToolTip": "Amiasea.Loom\\Projection\\Core\\ProjectionTypeRegistry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T03:33:35.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IProjectionTypeRegistry.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\IProjectionTypeRegistry.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom\\Projection\\Core\\IProjectionTypeRegistry.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\IProjectionTypeRegistry.cs",
+              "RelativeToolTip": "Amiasea.Loom\\Projection\\Core\\IProjectionTypeRegistry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T03:31:44.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EFProjectionExecutor.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom.EF\\Schema\\EFProjectionExecutor.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom.EF\\Schema\\EFProjectionExecutor.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom.EF\\Schema\\EFProjectionExecutor.cs",
+              "RelativeToolTip": "Amiasea.Loom.EF\\Schema\\EFProjectionExecutor.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAwwKYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T03:17:20.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IProjectionExecutor.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\IProjectionExecutor.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom\\Projection\\Core\\IProjectionExecutor.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\IProjectionExecutor.cs",
+              "RelativeToolTip": "Amiasea.Loom\\Projection\\Core\\IProjectionExecutor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T03:15:49.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProjectionExecutorBase.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\ProjectionExecutorBase.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom\\Projection\\Core\\ProjectionExecutorBase.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\ProjectionExecutorBase.cs",
+              "RelativeToolTip": "Amiasea.Loom\\Projection\\Core\\ProjectionExecutorBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T03:15:39.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProjectionIncludeBuilder.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\ProjectionIncludeBuilder.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom\\Projection\\Core\\ProjectionIncludeBuilder.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\ProjectionIncludeBuilder.cs",
+              "RelativeToolTip": "Amiasea.Loom\\Projection\\Core\\ProjectionIncludeBuilder.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T03:15:03.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProjectionPlan.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\ProjectionPlan.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom\\Projection\\Core\\ProjectionPlan.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\ProjectionPlan.cs",
+              "RelativeToolTip": "Amiasea.Loom\\Projection\\Core\\ProjectionPlan.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwAkAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T03:13:55.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProjectionSelection.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\ProjectionSelection.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom\\Projection\\Core\\ProjectionSelection.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\ProjectionSelection.cs",
+              "RelativeToolTip": "Amiasea.Loom\\Projection\\Core\\ProjectionSelection.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T03:13:34.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProjectionSelectionField.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\ProjectionSelectionField.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom\\Projection\\Core\\ProjectionSelectionField.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\ProjectionSelectionField.cs",
+              "RelativeToolTip": "Amiasea.Loom\\Projection\\Core\\ProjectionSelectionField.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T03:03:46.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ISelectionNode.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom\\AST\\ISelectionNode.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom\\AST\\ISelectionNode.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom\\AST\\ISelectionNode.cs",
+              "RelativeToolTip": "Amiasea.Loom\\AST\\ISelectionNode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T03:00:59.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ValueNode.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom\\AST\\ValueNode.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom\\AST\\ValueNode.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom\\AST\\ValueNode.cs",
+              "RelativeToolTip": "Amiasea.Loom\\AST\\ValueNode.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAqwEAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T03:00:40.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SelectionSetNode.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom\\AST\\SelectionSetNode.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom\\AST\\SelectionSetNode.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom\\AST\\SelectionSetNode.cs",
+              "RelativeToolTip": "Amiasea.Loom\\AST\\SelectionSetNode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T03:00:35.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProjectionBinder.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\ProjectionBinder.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom\\Projection\\Core\\ProjectionBinder.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Projection\\Core\\ProjectionBinder.cs",
+              "RelativeToolTip": "Amiasea.Loom\\Projection\\Core\\ProjectionBinder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T02:58:43.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IFieldSchema.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Schema\\IFieldSchema.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom\\Schema\\IFieldSchema.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Schema\\IFieldSchema.cs",
+              "RelativeToolTip": "Amiasea.Loom\\Schema\\IFieldSchema.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAcwBwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T02:57:32.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FieldSchema.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Schema\\FieldSchema.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom\\Schema\\FieldSchema.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom\\Schema\\FieldSchema.cs",
+              "RelativeToolTip": "Amiasea.Loom\\Schema\\FieldSchema.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T02:57:29.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SchemaInspector.cs",
+              "DocumentMoniker": "C:\\repos\\packages\\loom\\Amiasea.Loom.Tools\\SchemaInspector.cs",
+              "RelativeDocumentMoniker": "Amiasea.Loom.Tools\\SchemaInspector.cs",
+              "ToolTip": "C:\\repos\\packages\\loom\\Amiasea.Loom.Tools\\SchemaInspector.cs",
+              "RelativeToolTip": "Amiasea.Loom.Tools\\SchemaInspector.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T02:53:32.344Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"

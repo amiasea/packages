@@ -39,7 +39,7 @@ namespace Amiasea.Loom.Projection
             // ------------------------------------------------------------
             // 2. Convert the selection set into ProjectionFields
             // ------------------------------------------------------------
-            List<ProjectionField> fields = new List<ProjectionField>();
+            List<ProjectionFieldNode> fields = new List<ProjectionFieldNode>();
 
             if (operation.SelectionSet != null)
             {
@@ -77,7 +77,7 @@ namespace Amiasea.Loom.Projection
         //  FIELD CONVERSION
         // ====================================================================
 
-        private ProjectionField ConvertField(FieldNode node)
+        private ProjectionFieldNode ConvertField(FieldNode node)
         {
             if (node == null) throw new ArgumentNullException(nameof(node));
 
@@ -97,7 +97,7 @@ namespace Amiasea.Loom.Projection
             // ------------------------------------------------------------
             // Convert children (nested selection sets)
             // ------------------------------------------------------------
-            List<ProjectionField> children = new List<ProjectionField>();
+            List<ProjectionFieldNode> children = new List<ProjectionFieldNode>();
 
             if (node.SelectionSet != null)
             {
@@ -117,7 +117,7 @@ namespace Amiasea.Loom.Projection
             // ------------------------------------------------------------
             // Build the ProjectionField
             // ------------------------------------------------------------
-            return new ProjectionField(
+            return new ProjectionFieldNode(
                 node.Name,
                 args,
                 children,

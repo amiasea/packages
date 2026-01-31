@@ -1,6 +1,0 @@
-C:\repos\packages\loom\Amiasea.EF\obj\Debug\netstandard2.0\Amiasea.EF.csproj.AssemblyReference.cache
-C:\repos\packages\loom\Amiasea.EF\obj\Debug\netstandard2.0\Amiasea.EF.GeneratedMSBuildEditorConfig.editorconfig
-C:\repos\packages\loom\Amiasea.EF\obj\Debug\netstandard2.0\Amiasea.EF.AssemblyInfoInputs.cache
-C:\repos\packages\loom\Amiasea.EF\obj\Debug\netstandard2.0\Amiasea.EF.AssemblyInfo.cs
-C:\repos\packages\loom\Amiasea.EF\obj\Debug\netstandard2.0\Amiasea.EF.csproj.CoreCompileInputs.cache
-C:\repos\packages\loom\Amiasea.EF\obj\Debug\netstandard2.0\Amiasea.EF.sourcelink.json

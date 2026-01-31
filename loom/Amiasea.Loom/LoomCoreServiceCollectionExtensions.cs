@@ -2,15 +2,18 @@
 using Amiasea.Loom.Projection;
 using Microsoft.Extensions.DependencyInjection;
 
-public static class LoomCoreServiceCollectionExtensions
+namespace Amiasea.Loom
 {
-    public static IServiceCollection AddLoomCore(this IServiceCollection services)
+    public static class LoomCoreServiceCollectionExtensions
     {
-        var shapes = LoomGeneratedMetadata.FieldShapes;
+        public static IServiceCollection AddLoomCore(this IServiceCollection services)
+        {
+            var shapes = LoomGeneratedMetadata.FieldShapes;
 
-        services.AddSingleton<IFieldShapeResolver>(new FieldShapeResolver(shapes));
-        services.AddSingleton<IProjectionEngine, ProjectionEngine>();
+            services.AddSingleton<IFieldShapeResolver>(new FieldShapeResolver(shapes));
+            services.AddSingleton<IProjectionEngine, ProjectionEngine>();
 
-        return services;
+            return services;
+        }
     }
 }

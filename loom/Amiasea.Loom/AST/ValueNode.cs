@@ -8,7 +8,12 @@ namespace Amiasea.Loom.AST
     // Value nodes – structural only, no schema semantics.
     public abstract class ValueNode { }
 
-    public sealed class NullValueNode : ValueNode { }
+    public sealed class NullValueNode : ValueNode
+    {
+        public static readonly NullValueNode Instance = new NullValueNode();
+
+        private NullValueNode() { }
+    }
 
     public sealed class IntValueNode : ValueNode
     {

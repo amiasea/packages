@@ -2,21 +2,25 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-public interface IGraphQueryableProvider
+namespace Amiasea.Loom
 {
-    Task<IQueryable> GetRootAsync(
-        string rootName,
-        CancellationToken cancellationToken
-    );
 
-    Task<object> ExecuteQueryAsync(
-        IQueryable queryable,
-        CancellationToken cancellationToken
-    );
+    public interface IGraphQueryableProvider
+    {
+        Task<IQueryable> GetRootAsync(
+            string rootName,
+            CancellationToken cancellationToken
+        );
 
-    Task<object> GetValueAsync(
-        object instance,
-        string fieldName,
-        CancellationToken cancellationToken
-    );
+        Task<object> ExecuteQueryAsync(
+            IQueryable queryable,
+            CancellationToken cancellationToken
+        );
+
+        Task<object> GetValueAsync(
+            object instance,
+            string fieldName,
+            CancellationToken cancellationToken
+        );
+    }
 }

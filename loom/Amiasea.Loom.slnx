@@ -1,5 +1,7 @@
 <Solution>
-  <Project Path="Amiasea.EF/Amiasea.EF.csproj" Id="1f801e74-a2cf-4d24-9a9a-f390fcdd21c1" />
   <Project Path="Amiasea.Loom.Build.Task/Amiasea.Loom.Build.Task.csproj" Id="e49eaca9-2287-4f7c-ade7-a19cf7ea68ff" />
+  <Project Path="Amiasea.Loom.EF/Amiasea.Loom.EF.csproj" Id="1f801e74-a2cf-4d24-9a9a-f390fcdd21c1" />
+  <Project Path="Amiasea.Loom.Test/Amiasea.Loom.Test.csproj" Id="6c8f1c83-2c68-4bb0-ab08-f146fa8d00f2" />
+  <Project Path="Amiasea.Loom.Tools/Amiasea.Loom.Tools.csproj" Id="e7f2616c-1c3a-442f-8319-33033a0a8422" />
   <Project Path="Amiasea.Loom/Amiasea.Loom.csproj" />
 </Solution>

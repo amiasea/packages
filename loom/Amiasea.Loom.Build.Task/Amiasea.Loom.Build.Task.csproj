@@ -16,4 +16,8 @@
 	<None Include="$(OutputPath)Amiasea.Loom.Build.Task.dll" Pack="true" PackagePath="tasks/" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Amiasea.Loom\Amiasea.Loom.csproj" />
+  </ItemGroup>
+
 </Project>

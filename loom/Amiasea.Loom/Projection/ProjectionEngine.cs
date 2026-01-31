@@ -28,7 +28,7 @@ namespace Amiasea.Loom.Projection
             _requestFactory = requestFactory;
         }
 
-        public async Task<object> ExecuteAsync(
+        public async Task<ProjectionResult> ExecuteAsync(
             DocumentNode document,
             OperationNode operation,
             IGraphQueryableProvider provider,
@@ -47,7 +47,7 @@ namespace Amiasea.Loom.Projection
                 .ConfigureAwait(false);
 
             // 3. Return the raw data payload as the public compiler result
-            return result.Data;
+            return result;
         }
     }
 

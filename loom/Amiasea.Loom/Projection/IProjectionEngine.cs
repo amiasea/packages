@@ -12,7 +12,7 @@ namespace Amiasea.Loom.Projection
     /// </summary>
     public interface IProjectionEngine
     {
-        Task<object> ExecuteAsync(
+        Task<ProjectionResult> ExecuteAsync(
             DocumentNode document,
             OperationNode operation,
             IGraphQueryableProvider provider,
